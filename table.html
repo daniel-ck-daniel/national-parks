@@ -466,6 +466,10 @@ function matchesSeason(bestMonths, season) {
   if (season === 'all') return true;
   
   const months = bestMonths.toLowerCase();
+  
+  // Year-round parks match all seasons
+  if (months.includes('year-round')) return true;
+  
   const seasonMonths = {
     spring: ['march', 'april', 'may'],
     summer: ['june', 'july', 'august'],
