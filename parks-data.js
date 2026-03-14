@@ -44,6 +44,11 @@ const parks = [
       'Hiking Petroglyph Point Trail, explore Spruce Tree House'
     ],
     gear: ['Comfortable walking shoes', 'Sun protection', 'Camera', 'Water bottles', 'Light jacket', 'Binoculars'],
+    images: [
+      'https://images.unsplash.com/photo-1562690868-60bbe7293e94?w=800&q=80',
+      'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80',
+      'https://images.unsplash.com/photo-1565008576549-57569a49371d?w=800&q=80'
+    ],
     visited: false
   },
   {
@@ -65,6 +70,11 @@ const parks = [
       'Sunrise photography, visit Zapata Falls, stargazing at night'
     ],
     gear: ['Sandboard/sled (rentable nearby)', 'Gaiters', 'Sunscreen', 'Plenty of water', 'Closed-toe shoes', 'Trekking poles', 'Star chart'],
+    images: [
+      'https://images.unsplash.com/photo-1509023464722-18d996393ca8?w=800&q=80',
+      'https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?w=800&q=80',
+      'https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=800&q=80'
+    ],
     visited: false
   },
   {
@@ -107,6 +117,11 @@ const parks = [
       'Park Avenue Trail, Balanced Rock, Courthouse Towers viewpoint'
     ],
     gear: ['Hiking boots', 'Sun protection', '3+ liters water per person', 'Trekking poles', 'Headlamp', 'Camera', 'Microspikes (winter)'],
+    images: [
+      'https://images.unsplash.com/photo-1434394673726-e8232a5903b4?w=800&q=80',
+      'https://images.unsplash.com/photo-1531163761983-e036fc20c8d4?w=800&q=80',
+      'https://images.unsplash.com/photo-1484804959297-65e7c19d7c9f?w=800&q=80'
+    ],
     visited: false
   },
   {
@@ -191,6 +206,11 @@ const parks = [
       'Pa\'rus Trail, Weeping Rock, sunset at Watchman Trail'
     ],
     gear: ['Hiking boots', 'Water shoes/neoprene socks for Narrows', 'Trekking poles', 'Dry bag', 'Canyoneering gear (if technical routes)', 'Permit for Angels Landing'],
+    images: [
+      'https://images.unsplash.com/photo-1508963493744-76fce69379c0?w=800&q=80',
+      'https://images.unsplash.com/photo-1475940043906-43f5dab1b5ae?w=800&q=80',
+      'https://images.unsplash.com/photo-1504870712357-65ea720d6078?w=800&q=80'
+    ],
     visited: false
   },
   {
@@ -212,6 +232,11 @@ const parks = [
       'Rim Trail sections, sunset at Yavapai Point, visit Grand Canyon Village'
     ],
     gear: ['Hiking boots', 'Trekking poles', 'Layers', 'Lots of water', 'Salty snacks', 'Hat & sunglasses', 'Camera with wide lens'],
+    images: [
+      'https://images.unsplash.com/photo-1474044159687-1ee9f3a51722?w=800&q=80',
+      'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80',
+      'https://images.unsplash.com/photo-1506260408121-e353d10b87c7?w=800&q=80'
+    ],
     visited: false
   },
   {
@@ -359,6 +384,11 @@ const parks = [
       'Norris Geyser Basin, Mammoth Hot Springs terraces'
     ],
     gear: ['Bear spray', 'Binoculars', 'Layers', 'Hiking boots', 'Water', 'Camera with telephoto', 'First aid'],
+    images: [
+      'https://images.unsplash.com/photo-1568454537842-d933259bb258?w=800&q=80',
+      'https://images.unsplash.com/photo-1591382386627-349b692688ff?w=800&q=80',
+      'https://images.unsplash.com/photo-1542856391-010fb87dcfed?w=800&q=80'
+    ],
     visited: false
   },
   {
