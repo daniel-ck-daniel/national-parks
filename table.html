@@ -462,6 +462,20 @@ function sortTable(column) {
   renderTable();
 }
 
+function matchesSeason(bestMonths, season) {
+  if (season === 'all') return true;
+  
+  const months = bestMonths.toLowerCase();
+  const seasonMonths = {
+    spring: ['march', 'april', 'may'],
+    summer: ['june', 'july', 'august'],
+    fall: ['september', 'october', 'november'],
+    winter: ['december', 'january', 'february']
+  };
+  
+  return seasonMonths[season].some(month => months.includes(month));
+}
+
 function renderTable() {
   const tbody = document.getElementById('table-body');
   const seasonFilter = document.getElementById('filter-season').value;
@@ -470,7 +484,7 @@ function renderTable() {
   
   // Filter
   let filtered = parks.filter(park => {
-    if (seasonFilter !== 'all' && !park.bestMonths.toLowerCase().includes(seasonFilter)) return false;
+    if (!matchesSeason(park.bestMonths, seasonFilter)) return false;
     if (activityFilter !== 'all' && park.activityLevel !== activityFilter) return false;
     if (park.rating < ratingFilter) return false;
     return true;
