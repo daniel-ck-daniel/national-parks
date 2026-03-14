@@ -18,6 +18,11 @@ const parks = [
       'Moraine Park for elk viewing, Alberta Falls hike, explore Estes Park'
     ],
     gear: ['Layers for altitude', 'Hiking boots', 'Bear spray', 'Water filter', 'Trekking poles', 'Headlamp', 'First aid kit', 'Sunscreen & sunglasses'],
+    images: [
+      'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80',
+      'https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?w=800&q=80',
+      'https://images.unsplash.com/photo-1528127269322-539801943592?w=800&q=80'
+    ],
     visited: false
   },
   {
