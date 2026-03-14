@@ -96,6 +96,11 @@ const parks = [
       'Sunrise/sunset photography, East Portal for fishing access'
     ],
     gear: ['Camera with telephoto lens', 'Binoculars', 'Sturdy shoes', 'Layers', 'Tripod for photography'],
+    images: [
+      'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80',
+      'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80',
+      'https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=800&q=80'
+    ],
     visited: false
   },
   {
@@ -143,6 +148,11 @@ const parks = [
       'Cave Spring Trail, Newspaper Rock, sunset at Green River Overlook'
     ],
     gear: ['4WD vehicle for backcountry', 'Hiking boots', 'Loads of water', 'GPS/maps', 'Camping gear', 'First aid', 'Repair kit for vehicle'],
+    images: [
+      'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800&q=80',
+      'https://images.unsplash.com/photo-1516214104703-d870798883c5?w=800&q=80',
+      'https://images.unsplash.com/photo-1589519160142-b48ef8c9ef06?w=800&q=80'
+    ],
     visited: false
   },
   {
@@ -164,6 +174,11 @@ const parks = [
       'Sunset Point, Goosenecks Overlook, Cohab Canyon Trail'
     ],
     gear: ['Hiking boots', 'Sun protection', 'Water', 'Fruit picking bag', 'Camera', 'Layers'],
+    images: [
+      'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80',
+      'https://images.unsplash.com/photo-1484804959297-65e7c19d7c9f?w=800&q=80',
+      'https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=800&q=80'
+    ],
     visited: false
   },
   {
@@ -185,6 +200,11 @@ const parks = [
       'Mossy Cave Trail, stargazing ranger program'
     ],
     gear: ['Hiking boots', 'Layers (cooler temps)', 'Trekking poles', 'Camera', 'Headlamp', 'Sunglasses', 'Star chart'],
+    images: [
+      'https://images.unsplash.com/photo-1474524955719-b9f87c50ce47?w=800&q=80',
+      'https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=800&q=80',
+      'https://images.unsplash.com/photo-1500835556837-99ac94a94552?w=800&q=80'
+    ],
     visited: false
   },
   {
@@ -258,6 +278,11 @@ const parks = [
       'Explore wilderness area, Agate House backpacking'
     ],
     gear: ['Comfortable shoes', 'Sun protection', 'Water', 'Camera', 'Wide-brim hat', 'Light layers'],
+    images: [
+      'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80',
+      'https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?w=800&q=80',
+      'https://images.unsplash.com/photo-1565008576549-57569a49371d?w=800&q=80'
+    ],
     visited: false
   },
   {
@@ -279,6 +304,11 @@ const parks = [
       'Desert Discovery Nature Trail, sunset at Gates Pass'
     ],
     gear: ['Hiking boots', 'Sun protection', 'Lots of water', 'Hat', 'Light layers', 'Camera', 'First aid for cactus spines'],
+    images: [
+      'https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=800&q=80',
+      'https://images.unsplash.com/photo-1518709594023-6eab9bab7b23?w=800&q=80',
+      'https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=800&q=80'
+    ],
     visited: false
   },
   {
@@ -300,6 +330,11 @@ const parks = [
       'Backcountry camping, stargazing (darkest skies in Texas)'
     ],
     gear: ['Sturdy hiking boots', 'Trekking poles', 'Layers for altitude', 'Lots of water', 'Headlamp', 'Tent', 'Cold weather gear (winter)'],
+    images: [
+      'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80',
+      'https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=800&q=80',
+      'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80'
+    ],
     visited: false
   },
   {
@@ -321,6 +356,11 @@ const parks = [
       'Slaughter Canyon Cave tour (strenuous), Rattlesnake Springs birding'
     ],
     gear: ['Light jacket', 'Sturdy shoes (cave floors slippery)', 'Water', 'Camera (no flash)', 'Flashlight for Natural Entrance'],
+    images: [
+      'https://images.unsplash.com/photo-1527489377706-5bf97e608852?w=800&q=80',
+      'https://images.unsplash.com/photo-1550859492-d5da9d8e45f3?w=800&q=80',
+      'https://images.unsplash.com/photo-1580407196238-dac33f57c410?w=800&q=80'
+    ],
     visited: false
   },
   {
@@ -342,6 +382,11 @@ const parks = [
       'Full moon hike (if scheduled), plaster play area for kids'
     ],
     gear: ['Sand sleds', 'Sunscreen', 'Sunglasses', 'Closed-toe shoes', 'Lots of water', 'Camera', 'White balance card for photos'],
+    images: [
+      'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80',
+      'https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?w=800&q=80',
+      'https://images.unsplash.com/photo-1509023464722-18d996393ca8?w=800&q=80'
+    ],
     visited: false
   },
   {
@@ -363,6 +408,11 @@ const parks = [
       'Hot springs historic site, Boquillas Canyon, Rio Grande Village'
     ],
     gear: ['Backpacking gear', 'Water filter', 'Desert clothing', 'Trekking poles', 'Navigation', 'First aid', 'Bear canister', 'Lots of water capacity'],
+    images: [
+      'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80',
+      'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80',
+      'https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=800&q=80'
+    ],
     visited: false
   },
   {
@@ -410,6 +460,11 @@ const parks = [
       'Taggart Lake & Bradley Lake loop, sunset at Oxbow Bend'
     ],
     gear: ['Hiking boots', 'Bear spray', 'Layers', 'Trekking poles', 'Backpacking gear', 'Water filter', 'Ice axe (early season)'],
+    images: [
+      'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80',
+      'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&q=80',
+      'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80'
+    ],
     visited: false
   },
   {
@@ -431,6 +486,11 @@ const parks = [
       'Two Medicine area, Iceberg Lake Trail, sunrise at Lake McDonald'
     ],
     gear: ['Bear spray (essential)', 'Layers', 'Rain gear', 'Hiking boots', 'Trekking poles', 'Backpacking gear', 'Water filter', 'Navigation'],
+    images: [
+      'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80',
+      'https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?w=800&q=80',
+      'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80'
+    ],
     visited: false
   },
   {
@@ -452,6 +512,11 @@ const parks = [
       'Wildlife watching for bison and wild horses, sunset at Buck Hill'
     ],
     gear: ['Hiking boots', 'Binoculars', 'Layers (temp swings)', 'Water', 'Camera', 'Sun protection'],
+    images: [
+      'https://images.unsplash.com/photo-1474524955719-b9f87c50ce47?w=800&q=80',
+      'https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=800&q=80',
+      'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80'
+    ],
     visited: false
   },
   {
@@ -473,6 +538,11 @@ const parks = [
       'Sunrise at Pinnacles Overlook, sunset at Yellow Mounds, night stargazing'
     ],
     gear: ['Sturdy shoes', 'Sun protection', 'Water', 'Binoculars', 'Camera', 'Layers'],
+    images: [
+      'https://images.unsplash.com/photo-1474524955719-b9f87c50ce47?w=800&q=80',
+      'https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=800&q=80',
+      'https://images.unsplash.com/photo-1500835556837-99ac94a94552?w=800&q=80'
+    ],
     visited: false
   },
   {
@@ -494,6 +564,11 @@ const parks = [
       'Wildlife Loop Road for bison viewing, Cold Brook Canyon Trail'
     ],
     gear: ['Light jacket for cave', 'Sturdy shoes', 'Water', 'Layers for surface', 'Binoculars', 'Camera'],
+    images: [
+      'https://images.unsplash.com/photo-1527489377706-5bf97e608852?w=800&q=80',
+      'https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=800&q=80',
+      'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80'
+    ],
     visited: false
   },
   {
@@ -515,6 +590,11 @@ const parks = [
       'Explore islands, camp on backcountry sites, northern lights viewing'
     ],
     gear: ['Kayak/canoe (or rent)', 'PFD', 'Dry bags', 'Fishing gear', 'Camping equipment', 'Water filter', 'Bug spray (mosquitoes)'],
+    images: [
+      'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80',
+      'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80',
+      'https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=800&q=80'
+    ],
     visited: false
   },
   {
@@ -536,6 +616,11 @@ const parks = [
       'Day hike to Suzy\'s Cave, Lookout Louise, Scoville Point'
     ],
     gear: ['Backpacking gear', 'Water filter', 'Bear-proof food storage', 'Layers/rain gear', 'Boots', 'Kayak (or rent)', 'Ferry tickets (book early)'],
+    images: [
+      'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80',
+      'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80',
+      'https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?w=800&q=80'
+    ],
     visited: false
   },
   {
@@ -557,6 +642,11 @@ const parks = [
       'Boston Store Visitor Center, historic sites along the canal'
     ],
     gear: ['Comfortable shoes', 'Bike (or rent)', 'Water', 'Camera', 'Light layers', 'Binoculars'],
+    images: [
+      'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80',
+      'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80',
+      'https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=800&q=80'
+    ],
     visited: false
   },
   {
@@ -578,6 +668,11 @@ const parks = [
       'Bailly Homestead, Chellberg Farm historic sites'
     ],
     gear: ['Beach gear', 'Swimsuit', 'Sunscreen', 'Water shoes', 'Hat', 'Binoculars', 'Camera'],
+    images: [
+      'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80',
+      'https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?w=800&q=80',
+      'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80'
+    ],
     visited: false
   },
   {
@@ -599,6 +694,11 @@ const parks = [
       'Ranger programs, explore surface trails'
     ],
     gear: ['Light jacket for cave', 'Sturdy shoes (cave floors uneven)', 'Water', 'Headlamp for wild cave', 'Layers', 'Camera (no flash)'],
+    images: [
+      'https://images.unsplash.com/photo-1527489377706-5bf97e608852?w=800&q=80',
+      'https://images.unsplash.com/photo-1550859492-d5da9d8e45f3?w=800&q=80',
+      'https://images.unsplash.com/photo-1580407196238-dac33f57c410?w=800&q=80'
+    ],
     visited: false
   },
   {
@@ -620,6 +720,11 @@ const parks = [
       'Visit Hot Springs Mountain Tower, explore downtown Hot Springs'
     ],
     gear: ['Comfortable walking shoes', 'Swimsuit for bath', 'Water', 'Camera', 'Light jacket'],
+    images: [
+      'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80',
+      'https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=800&q=80',
+      'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80'
+    ],
     visited: false
   },
   {
@@ -641,6 +746,11 @@ const parks = [
       'Riverfront walk, explore downtown St. Louis'
     ],
     gear: ['Comfortable shoes', 'Camera', 'Light layers', 'Tram tickets (advance purchase)'],
+    images: [
+      'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80',
+      'https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=800&q=80',
+      'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80'
+    ],
     visited: false
   },
   {
@@ -662,6 +772,11 @@ const parks = [
       'Bass Harbor Head Lighthouse, evening lobster dinner'
     ],
     gear: ['Hiking boots', 'Layers', 'Rain gear', 'Bike (or rent)', 'Camera', 'Tide chart', 'Water'],
+    images: [
+      'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80',
+      'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80',
+      'https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=800&q=80'
+    ],
     visited: false
   },
   {
@@ -683,6 +798,11 @@ const parks = [
       'Appalachian Trail section, sunset at Stony Man'
     ],
     gear: ['Hiking boots', 'Layers', 'Water', 'Trekking poles', 'Camera', 'Bear bag'],
+    images: [
+      'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80',
+      'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80',
+      'https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=800&q=80'
+    ],
     visited: false
   },
   {
@@ -704,6 +824,11 @@ const parks = [
       'Evening owl prowl or firefly viewing (May)'
     ],
     gear: ['Bug spray (essential)', 'Water shoes for canoeing', 'Water', 'Hat', 'Binoculars', 'Headlamp'],
+    images: [
+      'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80',
+      'https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=800&q=80',
+      'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80'
+    ],
     visited: false
   },
   {
@@ -725,6 +850,11 @@ const parks = [
       'Paddleboarding, fishing, sunset cruise'
     ],
     gear: ['Snorkel gear', 'Swimsuit', 'Sunscreen (reef-safe)', 'Kayak (or rent)', 'PFD', 'Dry bag', 'Water shoes'],
+    images: [
+      'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80',
+      'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80',
+      'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80'
+    ],
     visited: false
   },
   {
@@ -746,6 +876,11 @@ const parks = [
       'Flamingo area, sunset boat tour, stargazing'
     ],
     gear: ['Bug spray (essential)', 'Sunscreen', 'Hat', 'Water', 'Binoculars', 'Kayak (or rent)', 'Camera with zoom'],
+    images: [
+      'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80',
+      'https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=800&q=80',
+      'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80'
+    ],
     visited: false
   },
   {
@@ -767,6 +902,11 @@ const parks = [
       'Camp overnight (book ahead), sunrise/sunset photography'
     ],
     gear: ['Snorkel gear', 'Sunscreen', 'All food & water (nothing on island)', 'Camping gear', 'Swimsuit', 'Ferry tickets'],
+    images: [
+      'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80',
+      'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80',
+      'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80'
+    ],
     visited: false
   },
   {
@@ -788,6 +928,11 @@ const parks = [
       'Roaring Fork Motor Nature Trail, Elkmont fireflies (June)'
     ],
     gear: ['Hiking boots', 'Rain gear (frequent rain)', 'Layers', 'Bear bag', 'Water', 'Camera', 'Trekking poles'],
+    images: [
+      'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80',
+      'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80',
+      'https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=800&q=80'
+    ],
     visited: false
   },
   {
@@ -809,6 +954,11 @@ const parks = [
       'Explore Thurmond ghost town, Sandstone Falls'
     ],
     gear: ['Climbing gear (or guided)', 'Rafting gear (provided by outfitters)', 'Hiking boots', 'Layers', 'Water', 'Camera'],
+    images: [
+      'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80',
+      'https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=800&q=80',
+      'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80'
+    ],
     visited: false
   },
   {
@@ -830,6 +980,11 @@ const parks = [
       'Coastal Drive for ocean views, elk at Gold Bluffs Beach'
     ],
     gear: ['Hiking boots', 'Rain gear (coastal fog)', 'Layers', 'Water', 'Camera', 'Binoculars'],
+    images: [
+      'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80',
+      'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80',
+      'https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=800&q=80'
+    ],
     visited: false
   },
   {
@@ -851,6 +1006,11 @@ const parks = [
       'Plaikni Falls Trail, Pinnacles Overlook, sunset at Rim Village'
     ],
     gear: ['Hiking boots', 'Layers (cooler at altitude)', 'Sunscreen', 'Water', 'Camera', 'Swimsuit'],
+    images: [
+      'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80',
+      'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80',
+      'https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?w=800&q=80'
+    ],
     visited: false
   },
   {
@@ -872,6 +1032,11 @@ const parks = [
       'Maple Pass Loop (7.2 mi), Blue Lake Trail'
     ],
     gear: ['Backpacking gear', 'Layers/rain gear', 'Hiking boots', 'Trekking poles', 'Bear canister', 'Water filter', 'Navigation'],
+    images: [
+      'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80',
+      'https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?w=800&q=80',
+      'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80'
+    ],
     visited: false
   },
   {
@@ -893,6 +1058,11 @@ const parks = [
       'Sol Duc Falls (1.6 mi), hot springs soak nearby'
     ],
     gear: ['Rain gear (essential)', 'Hiking boots', 'Layers', 'Water', 'Tide chart', 'Binoculars', 'Bear canister (backcountry)'],
+    images: [
+      'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80',
+      'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80',
+      'https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=800&q=80'
+    ],
     visited: false
   },
   {
@@ -914,6 +1084,11 @@ const parks = [
       'Grove of the Patriarchs (1.3 mi), Nisqually Vista'
     ],
     gear: ['Hiking boots', 'Layers', 'Trekking poles', 'Sunscreen', 'Water', 'Camera', 'Mountaineering gear for summit (guided recommended)'],
+    images: [
+      'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80',
+      'https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?w=800&q=80',
+      'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80'
+    ],
     visited: false
   },
   {
@@ -935,6 +1110,11 @@ const parks = [
       'Manzanita Lake loop, Kings Creek Falls, Sulphur Works'
     ],
     gear: ['Hiking boots', 'Layers', 'Sun protection', 'Water', 'Trekking poles', 'Camera', 'First aid'],
+    images: [
+      'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80',
+      'https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=800&q=80',
+      'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80'
+    ],
     visited: false
   },
   {
@@ -956,6 +1136,11 @@ const parks = [
       'Juniper Canyon Trail, sunset condor viewing'
     ],
     gear: ['Hiking boots', 'Headlamp for caves', 'Climbing gear (if climbing)', 'Layers', 'Water', 'Sunscreen', 'Binoculars'],
+    images: [
+      'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80',
+      'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80',
+      'https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=800&q=80'
+    ],
     visited: false
   },
   {
@@ -977,6 +1162,11 @@ const parks = [
       'Camp at Scorpion Canyon, stargaze (dark skies)'
     ],
     gear: ['Kayak (or rent)', 'Snorkel gear', 'Camping gear', 'All food/water', 'PFD', 'Dry bag', 'Seasickness meds'],
+    images: [
+      'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80',
+      'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80',
+      'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80'
+    ],
     visited: false
   },
   {
@@ -998,6 +1188,11 @@ const parks = [
       'Rock climbing at Hidden Valley or guided session, night stargazing'
     ],
     gear: ['Hiking boots', 'Climbing gear (or guided)', 'Layers (cold nights)', 'Lots of water', 'Sunscreen', 'Headlamp', 'Star chart'],
+    images: [
+      'https://images.unsplash.com/photo-1518709594023-6eab9bab7b23?w=800&q=80',
+      'https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=800&q=80',
+      'https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=800&q=80'
+    ],
     visited: false
   },
   {
@@ -1019,6 +1214,11 @@ const parks = [
       'Ubehebe Crater, Racetrack Playa (4WD), Wildrose Peak'
     ],
     gear: ['Desert boots', 'Sun protection', 'Massive amounts of water', 'Hat', 'Sunglasses', 'Layers (cold at night)', 'GPS'],
+    images: [
+      'https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?w=800&q=80',
+      'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80',
+      'https://images.unsplash.com/photo-1509023464722-18d996393ca8?w=800&q=80'
+    ],
     visited: false
   },
   {
@@ -1040,6 +1240,11 @@ const parks = [
       'Tokopah Falls (3.4 mi), or backpack Rae Lakes Loop (41 mi)'
     ],
     gear: ['Hiking boots', 'Layers', 'Bear canister', 'Trekking poles', 'Water filter', 'Camera', 'Sunscreen'],
+    images: [
+      'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80',
+      'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80',
+      'https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=800&q=80'
+    ],
     visited: false
   },
   {
@@ -1061,6 +1266,11 @@ const parks = [
       'Mariposa Grove, Tuolumne Meadows (high country)'
     ],
     gear: ['Hiking boots', 'Gloves for Half Dome cables', 'Bear canister', 'Layers', 'Water filter', 'Trekking poles', 'Permit for Half Dome'],
+    images: [
+      'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80',
+      'https://images.unsplash.com/photo-1506260408121-e353d10b87c7?w=800&q=80',
+      'https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=800&q=80'
+    ],
     visited: false
   }
 ];
