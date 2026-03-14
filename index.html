@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>National Parks - Card View</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #0d1117;
+  --surface: #161b22;
+  --border: #30363d;
+  --text: #e6edf3;
+  --text-muted: #8b949e;
+  --accent: #58a6ff;
+  --accent-hover: #79c0ff;
+  --positive: #3fb950;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  padding: 2rem;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+h1 {
+  font-size: 2rem;
+  color: var(--text);
+}
+
+.view-toggle {
+  padding: 0.5rem 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.view-toggle:hover {
+  border-color: var(--accent);
+  background: var(--bg);
+}
+
+.subtitle {
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+}
+
+/* STATS */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.stat {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+}
+
+/* FILTERS */
+.filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.filter-group label {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.filter-group select {
+  padding: 0.5rem 0.75rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  font-size: 0.9rem;
+}
+
+/* DISTANCE SECTIONS */
+.distance-section {
+  margin-bottom: 2.5rem;
+}
+
+.distance-header {
+  font-size: 1.3rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.distance-count {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-weight: normal;
+}
+
+/* PARK CARDS */
+.park-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.park-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.25rem;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.park-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.park-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 0.75rem;
+}
+
+.park-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.park-rating {
+  background: var(--positive);
+  color: var(--bg);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.park-location {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.park-distance {
+  color: var(--accent);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.park-months {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin-bottom: 0.75rem;
+}
+
+.park-description {
+  color: var(--text);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  overflow-y: auto;
+  padding: 2rem;
+}
+
+.modal.active {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+.modal-content {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  max-width: 800px;
+  width: 100%;
+  padding: 2rem;
+  position: relative;
+  margin: 2rem 0;
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1.5rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.modal-close:hover {
+  color: var(--text);
+}
+
+.modal h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+}
+
+.modal-meta {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.modal-meta-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-meta-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 0.25rem;
+}
+
+.modal-meta-value {
+  font-size: 1rem;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.modal-section {
+  margin-bottom: 1.5rem;
+}
+
+.modal-section h3 {
+  font-size: 1.2rem;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+}
+
+.modal-section p {
+  color: var(--text);
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+}
+
+.modal-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.modal-section li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+
+.modal-section li:last-child {
+  border-bottom: none;
+}
+
+.activity-tag {
+  display: inline-block;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+  
+  h1 {
+    font-size: 1.5rem;
+  }
+  
+  .park-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .modal {
+    padding: 1rem;
+  }
+  
+  .modal-content {
+    padding: 1.5rem;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="header">
+    <h1>National Parks</h1>
+    <a href="table.html" class="view-toggle">Switch to Table View</a>
+  </div>
+  <p class="subtitle">Lower 48 states — organized by distance from Denver</p>
+
+  <!-- Stats -->
+  <div class="stats">
+    <div class="stat">
+      <div class="stat-value" id="stat-total">0</div>
+      <div class="stat-label">Total Parks</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value" id="stat-visited">0</div>
+      <div class="stat-label">Visited</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value" id="stat-within-6">0</div>
+      <div class="stat-label">Within 6 Hours</div>
+    </div>
+  </div>
+
+  <!-- Filters -->
+  <div class="filters">
+    <div class="filter-group">
+      <label>Season:</label>
+      <select id="filter-season" onchange="renderParks()">
+        <option value="all">All Seasons</option>
+        <option value="spring">Spring</option>
+        <option value="summer">Summer</option>
+        <option value="fall">Fall</option>
+        <option value="winter">Winter</option>
+      </select>
+    </div>
+    <div class="filter-group">
+      <label>Activity:</label>
+      <select id="filter-activity" onchange="renderParks()">
+        <option value="all">All Types</option>
+        <option value="chill">Chill/Scenic</option>
+        <option value="moderate">Moderate Hiking</option>
+        <option value="intense">Intense/Backpacking</option>
+      </select>
+    </div>
+    <div class="filter-group">
+      <label>Min Rating:</label>
+      <select id="filter-rating" onchange="renderParks()">
+        <option value="0">Any</option>
+        <option value="4.5">4.5+</option>
+        <option value="4.6">4.6+</option>
+        <option value="4.7">4.7+</option>
+        <option value="4.8">4.8+</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Park List -->
+  <div id="park-list"></div>
+</div>
+
+<!-- Detail Modal -->
+<div id="modal" class="modal" onclick="closeModal(event)">
+  <div class="modal-content" onclick="event.stopPropagation()">
+    <button class="modal-close" onclick="closeModal()">&times;</button>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+<script src="parks-data.js"></script>
+<script>
+function renderParks() {
+  const container = document.getElementById('park-list');
+  const seasonFilter = document.getElementById('filter-season').value;
+  const activityFilter = document.getElementById('filter-activity').value;
+  const ratingFilter = parseFloat(document.getElementById('filter-rating').value);
+  
+  let filtered = parks.filter(park => {
+    if (seasonFilter !== 'all' && !park.bestMonths.toLowerCase().includes(seasonFilter)) return false;
+    if (activityFilter !== 'all' && park.activityLevel !== activityFilter) return false;
+    if (park.rating < ratingFilter) return false;
+    return true;
+  });
+  
+  // Group by distance
+  const groups = {
+    'Within 6 Hours': filtered.filter(p => p.driveHours <= 6),
+    '6-12 Hours': filtered.filter(p => p.driveHours > 6 && p.driveHours <= 12),
+    '12+ Hours': filtered.filter(p => p.driveHours > 12)
+  };
+  
+  // Render
+  container.innerHTML = Object.keys(groups).map(groupName => {
+    const parksInGroup = groups[groupName];
+    if (parksInGroup.length === 0) return '';
+    
+    return `
+      <div class="distance-section">
+        <div class="distance-header">
+          <span>${groupName}</span>
+          <span class="distance-count">${parksInGroup.length} park${parksInGroup.length !== 1 ? 's' : ''}</span>
+        </div>
+        <div class="park-cards">
+          ${parksInGroup.map(park => `
+            <div class="park-card" onclick="showDetail('${park.id}')">
+              <div class="park-header">
+                <div class="park-name">${park.name}</div>
+                <div class="park-rating">★ ${park.rating}</div>
+              </div>
+              <div class="park-location">${park.state}</div>
+              <div class="park-distance">${park.driveHours}h from Denver (${park.driveMiles} mi)</div>
+              <div class="park-months"><strong>Best:</strong> ${park.bestMonths}</div>
+              <div class="park-description">${park.shortDescription}</div>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    `;
+  }).join('');
+  
+  updateStats();
+}
+
+function updateStats() {
+  document.getElementById('stat-total').textContent = parks.length;
+  document.getElementById('stat-visited').textContent = parks.filter(p => p.visited).length;
+  document.getElementById('stat-within-6').textContent = parks.filter(p => p.driveHours <= 6).length;
+}
+
+function showDetail(parkId) {
+  const park = parks.find(p => p.id === parkId);
+  if (!park) return;
+  
+  const modal = document.getElementById('modal');
+  const body = document.getElementById('modal-body');
+  
+  body.innerHTML = `
+    <h2>${park.name}</h2>
+    <div class="modal-meta">
+      <div class="modal-meta-item">
+        <div class="modal-meta-label">Location</div>
+        <div class="modal-meta-value">${park.state}</div>
+      </div>
+      <div class="modal-meta-item">
+        <div class="modal-meta-label">Distance</div>
+        <div class="modal-meta-value">${park.driveHours}h (${park.driveMiles} mi)</div>
+      </div>
+      <div class="modal-meta-item">
+        <div class="modal-meta-label">Rating</div>
+        <div class="modal-meta-value">★ ${park.rating}</div>
+      </div>
+      <div class="modal-meta-item">
+        <div class="modal-meta-label">Best Months</div>
+        <div class="modal-meta-value">${park.bestMonths}</div>
+      </div>
+    </div>
+    
+    <div class="modal-section">
+      <h3>About</h3>
+      <p>${park.fullDescription}</p>
+    </div>
+    
+    <div class="modal-section">
+      <h3>Activities</h3>
+      <div>
+        ${park.activities.map(a => `<span class="activity-tag">${a}</span>`).join('')}
+      </div>
+      <p style="margin-top: 1rem;"><strong>Intensity:</strong> ${park.activityLevel.charAt(0).toUpperCase() + park.activityLevel.slice(1)}</p>
+    </div>
+    
+    <div class="modal-section">
+      <h3>4-Day Trip Itinerary</h3>
+      ${park.itinerary.map((day, i) => `
+        <p><strong>Day ${i + 1}:</strong> ${day}</p>
+      `).join('')}
+    </div>
+    
+    <div class="modal-section">
+      <h3>Essential Gear</h3>
+      <ul>
+        ${park.gear.map(item => `<li>${item}</li>`).join('')}
+      </ul>
+    </div>
+  `;
+  
+  modal.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal(event) {
+  if (event && event.target !== event.currentTarget) return;
+  const modal = document.getElementById('modal');
+  modal.classList.remove('active');
+  document.body.style.overflow = 'auto';
+}
+
+// Initial render
+renderParks();
+</script>
+
+</body>
+</html>
